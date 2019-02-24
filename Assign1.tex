@@ -108,12 +108,17 @@ Then,
 \frac{2^N q-(2^{N}-1)}{2^N}=\frac{1}{3}+\frac{1}{5}+\cdots
 \end{equation*}
 Since $(2^N q-(2^{N}-1), 2^N)=1$, the RHS should have $2^N$ term in denominator, but each terms in RHS has at most $2^{N-1}$ term, which is contradiction. Therefore, $\sum\limits_{i=2}^n \frac{1}{i}$ is not a natural number for all $n$.
+
 \section*{Problem 5}
-Assume that there are only finite primes of the form $4n+3$, and such primes be $4n_i+3$ for $i\in \{1, 2, \ldots, m\}$ in increasing order. Consider $a=2\left(\prod_{i=1}^m 4n_i+3\right)+1$. As an odd natural number, it has prime decomposition, and every prime factor can not be of the form $4n_i+3$ since $a \mod 4n_i+3\equiv 1$. Also, $a \mod 4\equiv 3$ but all the multiple of primes of the form $4n+1$ is $1$, which is contradiction .Therefore, There should be another prime of the form $4n+3$, which is contradiction to finiteness of primes of the form $4n+3$, and it shows there are infinitely many primes of the form $4n+3$.
+Assume that there are only finite primes of the form $4n+3$, and such primes be $4n_i+3$ for $i\in \{1, 2, \ldots, m\}$ in increasing order. Consider $a=2\left(\prod_{i=1}^m 4n_i+3\right)+1$. As an odd natural number, it has prime decomposition, and every prime factor can not be of the form $4n_i+3$ since $a \equiv 1\mod 4n_i+3$. Also, $a \equiv 3\mod 4$ but all the multiple of primes of the form $4n+1$ is $1$, which is contradiction .Therefore, There should be another prime of the form $4n+3$, which is contradiction to finiteness of primes of the form $4n+3$, and it shows there are infinitely many primes of the form $4n+3$.
+
 \section*{Problem 6}
+Consider a number $a=(n!)^2+1$ for a fixed $n$. I'll show that the minimal prime factor, I'll denote it $p$, of $a$ is of the form $4n+1$. If $p\leq n$, $p\mid a\Rightarrow p\mid 1$, which is non-sense, so $p>n$. Since $p\mid a$, $(n!)^2\equiv -1\mod p$ and $(n!^2)^{\frac{p-1}{2}}\equiv (-1)^{\frac{p-1}{2}} \mod p$ since $(\zz/p\zz)^*$ has a ring structure. ($(\zz/p\zz)^*$ is a multiplicative group of $\zz/p\zz$. Also, note that $p\nmid (n!)^2\Rightarrow p\nmid n!$.) Since $p\nmid n!$, by the Fermat's little theorem, $(n!)^{p-1}\equiv 1 \mod p$ and it implies $p \equiv 1 \mod 4$.
+Finally, assume that there are finitely many primes of the form $4n+1$ and let the set $\{4n_i+1\}_{i=1}^m$ in increasing order. Then, the smallest prime factor of $((4n_m+1)!)^2+1$ is a prime of the form $4n+1$ which is bigger than $4n_m+1$, which is contradiction. Therefore, there are infinitely many primes of the form $4n+1$.
 
 \section*{Problem 7}
-We can readily show that $\frac{1}{n}\geq \int_{n-1}^{n} \frac{1}{x} dx$ for all $n>1$ since $\frac{1}{x}$ is non-increasing function on $\rr^+$. Therefore, for all $N\in \mathbb{N}$, $\sum\limits_{i=1}^N \frac{1}{i}\geq 1+\int_1^{N}\frac{1}{x} dx=1+\ln(N)$. Therefore, $\sum\limits_{i=1}^N \frac{1}{i}\rightarrow \infty$ as $N\rightarrow \infty$.
+We can readily show that $\frac{1}{n}\geq \int_{n-1}^{n} \frac{1}{x} dx$ for all $n>1$ since $\frac{1}{x}$ is non-increasing function on $\rr^+$. Therefore, for all $N\in \mathbb{N}$, $\sum\limits_{i=1}^N \frac{1}{i}\geq \int_1^{N+1}\frac{1}{x} dx=\ln(N+1)$. Therefore, $\sum\limits_{i=1}^N \frac{1}{i}\rightarrow \infty$ as $N\rightarrow \infty$.
+
 \section*{Problem 8}
 For fixed $n>1$, we know that $\ln \left(\sum\limits_{i=1}^n \frac{1}{i}\right)\geq \ln \ln N$ by problem 7. Also,
 \begin{equation*}
