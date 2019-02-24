@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage{graphicx, amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{kotex}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{physics}
+\usepackage{ esint }
+
+\textwidth 6.5 truein 
+\oddsidemargin 0 truein 
+\evensidemargin -0.50 truein 
+\topmargin -.5 truein 
+\textheight 8.5in
+
+\DeclareMathOperator{\cc}{\mathbb{C}}
+\DeclareMathOperator{\rr}{\mathbb{R}}
+\DeclareMathOperator{\bA}{\mathbb{A}}
+\DeclareMathOperator{\zz}{\mathbb{Z}}
+\DeclareMathOperator{\fra}{\mathfrak{a}}
+\DeclareMathOperator{\frb}{\mathfrak{b}}
+\DeclareMathOperator{\frm}{\mathfrak{m}}
+\DeclareMathOperator{\frp}{\mathfrak{p}}
+\DeclareMathOperator{\slin}{\mathfrak{sl}}
+\DeclareMathOperator{\Lie}{\mathsf{Lie}}
+\DeclareMathOperator{\Alg}{\mathsf{Alg}}
+\DeclareMathOperator{\Spec}{\mathrm{Spec}}
+\DeclareMathOperator{\End}{\mathrm{End}}
+\DeclareMathOperator{\rad}{\mathrm{rad}}
+\newcommand*\Laplace{\mathop{}\!\mathbin\bigtriangleup}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\Sch}{\mathbf{Sch}}
+\newcommand{\Ring}{\mathbf{Ring}}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+
+\begin{document}
+
+
+\title{Introduction to Number Theory - HW1}
+\author{SungBin Park, Physics, 20150462} 
+
+ \maketitle
+
+\section*{Problem 1}
+\begin{enumerate}
+    \item[(a)] ($\Leftarrow$) Since $(a,b)=d$, $\exists x_0, y_0\in \zz$ such that $ax_0+by_0=d$. Since $d\mid n$, $\exists c\in \zz$ such that $dc=n$. Therefore, $acx_0+bcy_0=dc=n$ and the solution of $ax+by=n$ is $x=cx_0$, $y=cy_0$.
+    
+    ($\Rightarrow$) Assume $d\nmid n$. Then, $\exists r\in \mathbb{N}$ such that $0<r<d$ and $n=dq+r$ for some $q\in \mathbb{Z}$. If $ax+by=n$ is soluble and the solution is $ax_1+by_1=n$, then $a(x_1-qx_0)+b(y_1-qy_0)=r$ and it means $d$ is not g.c.d. which is contradiction. Therefore, $ax+by=n$ is not solution.
+    \item[(b)] 
+\end{enumerate}
+\section*{Problem 2}
+
+\section*{Problem 3}
+
+\section*{Problem 4}
+
+\section*{Problem 5}
+
+\section*{Problem 6}
+
+\section*{Problem 7}
+\end{document}
