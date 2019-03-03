@@ -64,74 +64,118 @@
 
 
 %Copy the following block of text for each problem in the assignment.
+\section{Assign 2}
 \begin{problem}{1}
 \end{problem}
 \begin{enumerate}
 
-    \item[(a)] 
+    \item[(a)] Assume that $aa_i\equiv aa_j \mod n$ for some $i\neq j$, then $a(a_i-a_j)\equiv 0 \mod n$. Since $(a,n)=1$, $n\equiv a_i-a_j$. However, $0<\abs{a_i-a_j}<n$ for $\{i,j\}\subset \{1, 2, \ldots, \phi(n)\}$, which is a contradiction. Therefore, $aa_i$ and $aa_j$ are not congruent in modulo $n$. By the pigeonhole principle, $\{1,2,3,\ldots,n\}=\{a_1, a_2,\ldots, a_n\}=\{aa_1, aa_2, \ldots, aa_n\}$ as a complete set of residues modulo $n$.
 
     \item[(b)] I'll prove the statement: If $\{a_1, a_2, \ldots, a_{\phi(n)}\}$ is a reduced set of residues modulo $n$, so is $\{aa_1, aa_2, \ldots, aa_{\phi(n)}\}$.
     \begin{proof}
-    Assume that $aa_i\equiv aa_j \mod n$ for some $i\neq j$, then $a(a_i-a_j)\equiv 0 \mod n$. Since $(a,n)=1$, $n\equiv a_i-a_j$. However, $0<\abs{a_i-a_j}<n$ for $\{i,j\}\subset \{1, 2, \ldots, \phi(n)\}$, which is a contradiction. Therefore, $aa_i$ and $aa_j$ are not congruent in modulo $n$. Furthermore, we can readily see that $(aa_i, n)=1$ since $(a,n)=1\Rightarrow \exists x_1,y_1~ax_1+ny_1=1$ and $(a_i, n)=1\Rightarrow \exists x_2, y_2~a_ix_2+ny_2=1$, so $aa_i(x_1x_2)+n(a_ix_2y_1+ax_1y_2+ny_1y_2)=1$. By the definition of $\phi(n)$, $\{aa_1, aa_2, \ldots, aa_{\phi(n)}\}$ forms a reduced set of residues modulo $n$.
+    By the same reason of (a), $aa_i$ and $aa_j$ are not congruent in modulo $n$. Furthermore, we can readily see that $(aa_i, n)=1$ since $(a,n)=1\Rightarrow \exists x_1,y_1~ax_1+ny_1=1$ and $(a_i, n)=1\Rightarrow \exists x_2, y_2~a_ix_2+ny_2=1$, so $aa_i(x_1x_2)+n(a_ix_2y_1+ax_1y_2+ny_1y_2)=1$. By the definition of $\phi(n)$, $\{aa_1, aa_2, \ldots, aa_{\phi(n)}\}$ forms a reduced set of residues modulo $n$.
     \end{proof} 
     
 \end{enumerate}
 
-
-
-\newpage
 %Copy the following block of text for each problem in the assignment.
 \begin{problem}{2}
 \end{problem}
-I'll show that $8n+3$, $n\in \mathbb{Z}$ is the solution set. We can easily see that this is a subset of the solution of $3x\equiv 9 (\mod 24)$. Conversely, assume that there exists $n\in \mathbb{Z}$ and $a\in\{0, 1, 2, 4, \ldots, 7\}$ such that $8n+a$ satisfies $3x\equiv 9 (\mod 24)$. Then, it means $3a\equiv 9 (\mod 24)$, but since $0\geq 3a\geq 21$, $3a$ is not congruent to $9$ in modulo $24$,which is contradiction. Therefore, $8n+3$, $n\in \mathbb{Z}$ is the solution set.
+I'll show that $8n+3$, $n\in \mathbb{Z}$ is the solution set. We can easily see that this is a subset of the solution of $3x\equiv 9 \mod 24$. Conversely, assume that there exists $n\in \mathbb{Z}$ and $a\in\{0, 1, 2, 4, \ldots, 7\}$ such that $8n+a$ satisfies $3x\equiv 9 \mod 24$. Then, it means $3a\equiv 9 \mod 24$, but since $0\geq 3a\geq 21$, $3a$ is not congruent to $9$ in modulo $24$,which is contradiction. Therefore, $8n+3$, $n\in \mathbb{Z}$ is the solution set.
 \begin{problem}{3}
 \end{problem}
 Since $(9,7)=(9,5)=(7,5)=1$, I can use Chinese remainder theorem.
 
-$35\equiv -1 (\mod 9)$. $45\equiv 3 (\mod 7)$. $63 \equiv 3 (\mod 5)$. $8*35+4*45+1*63+315n$ is the solution.
+$35\equiv -1 \mod 9$. $45\equiv 3 \mod 7$. $63 \equiv 3 \mod 5$. $8*35+4*45+1*63+315n$ is the solution.
 
 \begin{problem}{4}
 \end{problem}
 \begin{enumerate}
-\item[(i)] For modulo $4$, $x^2$ is congruent to $0$ or $1$, so $x^2+y^2$ is congruent to $0,1,2$. However, $103\equiv 4 (\mod 4)$. Therefore, there is no solution for $x^2+y^2=103$.
-\item[(ii)] For modulo $8$, $x^2$ is congruent to $0, 4, 1$. Therefore, $x^2+y^2+z^2$ congruents to $0, 1, 2, 4, 5, 6$. However, $95\equiv 7 (\mod 8)$. Therefore, $x^2+y^2+z^2=95$ does not have solution.
+\item[(i)] For modulo $4$, $x^2$ is congruent to $0$ or $1$, so $x^2+y^2$ is congruent to $0,1,2$. However, $103\equiv 4 \mod 4$. Therefore, there is no solution for $x^2+y^2=103$.
+\item[(ii)] For modulo $8$, $x^2$ is congruent to $0, 4, 1$. Therefore, $x^2+y^2+z^2$ congruents to $0, 1, 2, 4, 5, 6$. However, $95\equiv 7 \mod 8$. Therefore, $x^2+y^2+z^2=95$ does not have solution.
 \end{enumerate}
 %Copy the following block of text for each problem in the assignment.
+\newpage
 \begin{problem}{5}
 \end{problem}
-Assume that there are only finite primes of the form $4n+3$, and such primes be $4n_i+3$ for $i\in \{1, 2, \ldots, m\}$ in increasing order. Consider $a=2\left(\prod_{i=1}^m (4n_i+3)\right)+1$. As an odd natural number, it has prime decomposition, and every prime factor can not be of the form $4n_i+3$ since $a \equiv 1\mod (4n_i+3)$. Also, $a \equiv 3\mod 4$, but all the multiple of primes of the form $4n+1$ is $1$, which is contradiction .Therefore, There should be another prime of the form $4n+3$, which is contradiction to finiteness of primes of the form $4n+3$, and it shows there are infinitely many primes of the form $4n+3$.
 
 
+First, assume that $x$ is odd number. Then, $x$ is form of $4n+1$ or $4n+3$. For $4n+1$, $x^3\equiv 1 \mod 4$ an for $4n+3$, $x^3\equiv 3 \mod 4$. For either case, it can not satisfies $x^3\equiv(x-1)^3+(x-2)^3+(x-3)^3 \mod 4$. Therefore, $x$ should be even number.
+
+Assume that $x$ is of form $4n$. Then, $(x-1)^3\equiv 12n-1 \mod 16$, $(x-3)^3\equiv 12(n-1)+1 \mod 16$, and $(x-2)^3\equiv 8 \mod 16$. Therefore, $0\equiv 8n-4 \mod 16$, which is impossible. Hence, $x$ is of form $4n+2$.
+
+Let $f(x)=(x-1)^3+(x-2)^3+(x-3)^3-x^3=2x^3-18x^2+42x-36$. For $x\geq 10$, $x^2(2x-18)+42x-36>0$. Also for $x\leq -2$, $x^2(2x-18)+42x-36<0$. For $x=2$, $f(x)=-8$. Therefore, the only solution is $f(6)=0$.
 
 
 %Copy the following block of text for each problem in the assignment.
 \begin{problem}{6}
 \end{problem}
-Consider a number $a=(n!)^2+1$ for a fixed $n$. I'll show that the minimal prime factor of $a$, will be denoted by $p$, is of form $4n+1$. If $p\leq n$, then $p\mid a\Rightarrow p\mid 1$, which is non-sense, so $p>n$. Since $p\mid a$, $(n!)^2\equiv -1\mod p$ and $(n!^2)^{\frac{p-1}{2}}\equiv (-1)^{\frac{p-1}{2}} \mod p$ since $(\zz/p\zz)^*$ has a ring structure. ($(\zz/p\zz)^*$ is a multiplicative group of $\zz/p\zz$.) Also, note that $p\nmid (n!)^2\Rightarrow p\nmid n!$.) Since $p\nmid n!$, by the Fermat's little theorem, $(n!)^{p-1}\equiv 1 \mod p$ and it implies $p \equiv 1 \mod 4$.
-Finally, assume that there are finitely many primes of the form $4n+1$ and let the set $\{4n_i+1\}_{i=1}^m$ in increasing order. Then, the smallest prime factor of $((4n_m+1)!)^2+1$ is a prime of the form $4n+1$ which is bigger than $4n_m+1$, which is contradiction. Therefore, there are infinitely many primes of the form $4n+1$.
+In $(\mathbb{Z}/10\mathbb{Z})^*$, which is multiplicative group of $\mathbb{Z}/10\mathbb{Z}$, $7^{139}\equiv7\cdot 49^{69}\equiv 7\cdot (-1)^{69}\equiv 3 \mod 10$.
 
-The proof of Fermat's little theorem: We know that $\abs{(\zz/p\zz)^*}=p-1$, so for $a\in \mathbb{N}$ satisfying $p\nmid a$, $a^{p-1}\equiv 1 \mod p$.
+$13^{2018}\equiv 3^{2018}\equiv (-1)^{1009}\equiv 9 \mod 10$. Therefore, the last digit of $7^{139}$ an $13^{2018}$ are $3$ and $9$.
 
-%Copy the following block of text for each problem in the assignment.
 \begin{problem}{7}
 \end{problem}
-We can readily show that $\frac{1}{n}\geq \int_{n-1}^{n} \frac{1}{x} dx$ for all $n>1$ since $\frac{1}{x}$ is non-increasing continuous function on $\rr^+$. Therefore, for all $N\in \mathbb{N}$, $\sum\limits_{i=1}^N \frac{1}{i}\geq \int_1^{N+1}\frac{1}{x} dx=\ln(N+1)$. Therefore, $\sum\limits_{i=1}^N \frac{1}{i}\rightarrow \infty$ as $N\rightarrow \infty$.
+Computing $x^2 \mod 23$,
+\begin{equation*}
+\begin{split}
+    0^2&\equiv0 \\
+    1^2&\equiv1 \\
+    2^2&\equiv4 \\
+    3^2&\equiv9 \\
+    4^2&\equiv16 \\
+    5^2&\equiv2 \\
+    6^2&\equiv13 \\
+    7^2&\equiv3 \\
+    8^2&\equiv18 \\
+    9^2&\equiv12 \\
+    10^2&\equiv8 \\
+    11^2&\equiv6 \\
+\end{split}
+\end{equation*}
+and by the symmetricity, $(23-n)^2\equiv n^2 \mod 23$ for $n\in\{1, 2,\ldots, 11\}$. There is no $22$ in $x^2 \mod 23$. Therefore, there is no solution for $x^2+1=23y$.
 
 
 %Copy the following block of text for each problem in the assignment.
 \newpage
 \begin{problem}{8}
 \end{problem}
-I'll enumerator each prime $\{p_i\}$ in increasing order. For fixed $n>1$, we know that $\ln \left(\sum\limits_{i=1}^n \frac{1}{i}\right)\geq \ln \ln N$ by problem 7. Also, for fixed $m\in \mathbb{N}$,
+I'll prove this by induction. Assume that the statement is true for $k\geq 3$. Then, it means that for odd number satisfying $1\leq a< 2^{k}$, $a^{2^{k-2}}=n\cdot 2^k+1$ for some $n$, so $a^{2^{k-1}}=(n\cdot 2^k+1)^2$ and $a^2\equiv 1 \mod 2^{n+1}$ for $1\leq a< 2^{k}$. For $2^k<a<2^{k+1}$, we know that $(2^{k+1}-a)^2\equiv a^2 \mod 2^{k+1}$ reducing $1\leq a< 2^{k}$ case. Therefore, $a^{2^{k-2}}\equiv 1 \mod 2^k$ for all $k\geq 3$.
+\newpage
+\section{Quiz 3}
+\begin{problem}{1}
+\end{problem}
+Since $2^9\equiv 512\equiv -(2^7+1) \mod 641$, $512^3\cdot 2^5\equiv -(2^7+1)^3\cdot 2^5 \equiv -2(2^9+2^2)^2(2^7+1)\equiv -2(-129+4)^2(2^7+1)\equiv-2(2^7-3)^2(2^7+1)\equiv -(2^{15}-3\cdot 2^9+18)(2^7+1)\equiv -((-2^7-1)2^6+3(129)+18)(2^7+1)\equiv -( 2^4(2^7+1)+341)(2^7+1)\equiv -(2^2(-2^7-1)+357)(2^7+1)\equiv-(2^7+354)(2^7+1)\equiv -1 \mod 641 $. Therefore, $641\mid 2^{2^5}+1$.
+
+\begin{problem}{2}
+\end{problem}
+First, I'll show that any combination is an integer. To prove this, I'll use Pascal's triangle:
 \begin{equation*}
-\begin{split}
-\sum\limits_{i=1}^m \ln \left(\sum\limits_{j=0}^\infty \frac{1}{p_i^j}\right)&=-\sum\limits_{i=1}^m \ln \left(1-\frac{1}{p_i}\right) \\
-&\leq \sum\limits_{i=1}^\infty \frac{1}{p_i} + \sum\limits_{j=2}^\infty \left(\frac{1}{j}\sum\limits_{i=1}^\infty \frac{1}{p^j_i}\right)~(\textrm{By Taylor expansion}) \\
-&\leq \sum\limits_{i=1}^\infty \frac{1}{p_i} + \sum\limits_{j=2}^\infty \frac{1}{j}\left(\left(\frac{1}{2^j}\right)+\sum\limits_{i=3}^\infty \frac{1}{i^j}\right) \\
-&\leq \sum\limits_{i=1}^\infty \frac{1}{p_i} + 1+\left(\sum\limits_{j=2}^\infty \int_2^\infty \frac{1}{x^j} dx \right) \\
-&\leq \sum\limits_{i=1}^\infty \frac{1}{p_i} + 1+\left(\sum\limits_{j=2}^\infty \frac{1}{j-1}\frac{1}{2^{j-1}}\right) \\
-&\leq \sum\limits_{i=1}^\infty \frac{1}{p_i} + 2
-\end{split}
+    \binom{n}{k}=\frac{n!}{(n-k)!k!}=\frac{(n-1)!}{(n-1-k)!k!}+\frac{(n-1)!}{(n-k)!(k-1)!}=\binom{n-1}{k}+\binom{n-1}{k-1}
 \end{equation*}
-All the rational number of the form $\frac{1}{n}$ can be generated by $\sum\limits_{i=1}^\infty\left(\sum\limits_{j=0}^\infty \frac{1}{p_i^j}\right)$ by Euler's argument. Therefore, $\sum\limits_{i=1}^m\ln\left(\sum\limits_{j=0}^\infty \frac{1}{p_i^j}\right)\rightarrow \infty$ as $m\rightarrow \infty$, but if $\sum\limits_{i=1}^\infty \frac{1}{p_i}$ is bounded, it makes contradiction. Therefore, $\sum\limits_{i=1}^\infty \frac{1}{p_i}$ diverges.
+For induction, assume that $\binom{n}{k}\in\mathbb{Z}$ for $0\leq k\leq n$. (The base case $n=0,1$ can be easily shown.) For $n+1$ case with $1\leq k\leq n$,
+\begin{equation*}
+    \binom{n+1}{k}=\binom{n}{k}+\binom{n}{k-1} \in\mathbb{Z}
+\end{equation*}
+For $k=0,n+1$, it is also an integer. Therefore, $\binom{n}{k}\in\mathbb{Z}$ for all $n$ and $0\leq k\leq n$.
+\begin{enumerate}
+    \item[(i)] Since $n<p$, there is no prime factor of $p$ in $n!$, but $(2n)!$ have prime factor $p$. Therefore, $\binom{2n}{n}\equiv 0 \mod p$
+    \item[(ii)] Again, no prime factor of $p$ in $n!$, so $\binom{2n}{n}\equiv 0 \mod p^2$ means $p^2\mid (2n)!$. If $p\mid (2n)!/p$, there exists $a\neq p$ such that $a\in\{1,2,\ldots, 2n\}$ and $p\mid a$. However, it means that $a\geq 2p>2n$, which is contradiction. Therefore, $\binom{2n}{n}$ is not congruent to $0$ in modulo $p^2$.
+\end{enumerate}
+\begin{problem}{3}
+\end{problem}
+\begin{enumerate}
+    \item [(i)] By Wilson's theorem, $(p-1)!\equiv -1 \mod p$. Since $p$ is odd and $(p-a)\equiv -a \mod p$ for $0\leq a\leq p$, \begin{equation*}
+    (-1)^{\frac{p-1}{2}}1^2 \cdot 2^2 \cdots \left(\frac{p-1}{2}\right)^2\equiv -1 \mod p
+\end{equation*}
+Since $2^{p-1}\equiv 1 \mod p$,
+\begin{equation*}
+    2^{p-1}\left(1^2\cdot 2^2 \cdots \left(\frac{p-1}{2}\right)^2\right)\equiv 2^2\cdot 4^2\cdots (p-1)^2\equiv (-1)^{\frac{p+1}{2}} \mod p
+\end{equation*}
+    \item[(ii)] By Wilson's theorem, $\left((p-1)!\right)^2\equiv 1 \mod p$ and we already shown that $2^2\cdot 4^2\cdots (p-1)^2\equiv (-1)^{\frac{p+1}{2}} \mod p$. Therefore, $1^2\cdot 3^2\cdots (p-2)^2\equiv 2^2\cdot 4^2\cdots (p-1)^2 \mod p$.
+\end{enumerate}
+\newpage
+\begin{problem}{4}
+For $m=63$, The solution contains $1,4,16,22$.
+\end{problem}
 \end{document}
