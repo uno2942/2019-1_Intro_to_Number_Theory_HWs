@@ -83,54 +83,19 @@
 %Copy the following block of text for each problem in the assignment.
 \begin{problem}{2}
 \end{problem}
-\begin{enumerate}
-\item $432=95\cdot 4+52$
-\item $95=52\cdot 1+43$
-\item $52=43\cdot 1+9$
-\item $43=9\cdot 4+7$
-\item $9=7 \cdot 1+2$
-\item $7=2\cdot 3 +1$
-\end{enumerate}
-so,
-\begin{enumerate}
-\item $43=95-(432-95\cdot 4)=95\cdot 5-432$
-\item $9=(432-95\cdot 4)-(95\cdot 5-432)=2\cdot 432 - 9\cdot 95$
-\item $7=(5\cdot 95-432)-4\cdot (2\cdot 432 - 9\cdot 95)=-9\cdot 432 + 41\cdot 95$
-\item $2=(2\cdot 432 - 9\cdot 95)-(-9\cdot 432 + 41\cdot 95)=11\cdot 432 - 50\cdot 95$.
-\item $1=(-9\cdot 432 + 41\cdot 95)-3\cdot(11\cdot 432 - 50\cdot 95)=-42\cdot 432 + 191 \cdot 95$
-\end{enumerate}
-
-Therefore,
-\begin{equation*}
-    -42\cdot 432 + 191 \cdot 95=1
-\end{equation*}
-%Copy the following block of text for each problem in the assignment.
+I'll show that $8n+3$, $n\in \mathbb{Z}$ is the solution set. We can easily see that this is a subset of the solution of $3x\equiv 9 (\mod 24)$. Conversely, assume that there exists $n\in \mathbb{Z}$ and $a\in\{0, 1, 2, 4, \ldots, 7\}$ such that $8n+a$ satisfies $3x\equiv 9 (\mod 24)$. Then, it means $3a\equiv 9 (\mod 24)$, but since $0\geq 3a\geq 21$, $3a$ is not congruent to $9$ in modulo $24$,which is contradiction. Therefore, $8n+3$, $n\in \mathbb{Z}$ is the solution set.
 \begin{problem}{3}
 \end{problem}
-$35\cdot 3- 55\cdot 2=-5$. $46(35\cdot 3- 55\cdot 2)+3\cdot 77=138\cdot 35-92 \cdot 55+3\cdot 77=1$.
+Since $(9,7)=(9,5)=(7,5)=1$, I can use Chinese remainder theorem.
 
-Therefore,
-\begin{equation*}
-138\cdot 35-92 \cdot 55+3\cdot 77=1
-\end{equation*}
+$35\equiv -1 (\mod 9)$. $45\equiv 3 (\mod 7)$. $63 \equiv 3 (\mod 5)$. $8*35+4*45+1*63+315n$ is the solution.
 
-%Copy the following block of text for each problem in the assignment.
 \begin{problem}{4}
 \end{problem}
-I'll show it by contradiction. Assume that $\sum\limits_{i=2}^n \frac{1}{i}$ is a natural number $q$. Since $n$ is bounded, there exists $N$ such that $2^N\leq n < 2^{N+1}$. Then,
-\begin{equation*}
-2^N\left(\frac{1}{2}+\cdots +\frac{1}{n}\right)=2^{N-1}+\cdots+1+2^N\left(\frac{1}{3}+\frac{1}{5}+\cdots + f(n)\right)=2^N q
-\end{equation*}
-(If $n$ is not form of $2^N$, $f(n)=\frac{1}{n}$. If not, $f(n)=\frac{1}{n-1}$.)
-Then,
-\begin{equation*}
-\frac{2^N q-(2^{N}-1)}{2^N}=\frac{1}{3}+\frac{1}{5}+\cdots+f(n)
-\end{equation*}
-Since $(2^N q-(2^{N}-1), 2^N)=1$, the RHS should have $2^N$ term in denominator, but each terms in RHS has at most $2^{N-1}$ term, which is contradiction. Therefore, $\sum\limits_{i=2}^n \frac{1}{i}$ is not a natural number for all $n$.
-
-
-
-\newpage
+\begin{enumerate}
+\item[(i)] For modulo $4$, $x^2$ is congruent to $0$ or $1$, so $x^2+y^2$ is congruent to $0,1,2$. However, $103\equiv 4 (\mod 4)$. Therefore, there is no solution for $x^2+y^2=103$.
+\item[(ii)] For modulo $8$, $x^2$ is congruent to $0, 4, 1$. Therefore, $x^2+y^2+z^2$ congruents to $0, 1, 2, 4, 5, 6$. However, $95\equiv 7 (\mod 8)$. Therefore, $x^2+y^2+z^2=95$ does not have solution.
+\end{enumerate}
 %Copy the following block of text for each problem in the assignment.
 \begin{problem}{5}
 \end{problem}
