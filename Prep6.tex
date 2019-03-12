@@ -1,0 +1,112 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Do not alter this block of commands.  If you're proficient at LaTeX, you may include additional packages, create macros, etc. immediately below this block of commands, but make sure to NOT alter the header, margin, and comment settings here. 
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts, enumitem, fancyhdr, color, comment, graphicx, environ, kotex, mathrsfs, mathtools, physics, esint, bm}
+\pagestyle{fancy}
+\setlength{\headheight}{65pt}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{sol}
+    {\emph{Solution:}
+    }
+    {
+    \qed
+    }
+\specialcomment{com}{ \color{blue} \textbf{Comment:} }{\color{black}} %for instructor comments while grading
+\NewEnviron{probscore}{\marginpar{ \color{blue} \tiny Problem Score: \BODY \color{black} }}
+
+\DeclareMathOperator{\cc}{\mathbb{C}}
+\DeclareMathOperator{\rr}{\mathbb{R}}
+\DeclareMathOperator{\bA}{\mathbb{A}}
+\DeclareMathOperator{\zz}{\mathbb{Z}}
+\DeclareMathOperator{\fra}{\mathfrak{a}}
+\DeclareMathOperator{\frb}{\mathfrak{b}}
+\DeclareMathOperator{\frm}{\mathfrak{m}}
+\DeclareMathOperator{\frp}{\mathfrak{p}}
+\DeclareMathOperator{\slin}{\mathfrak{sl}}
+\DeclareMathOperator{\Lie}{\mathsf{Lie}}
+\DeclareMathOperator{\Alg}{\mathsf{Alg}}
+\DeclareMathOperator{\Spec}{\mathrm{Spec}}
+\DeclareMathOperator{\End}{\mathrm{End}}
+\DeclareMathOperator{\rad}{\mathrm{rad}}
+\newcommand*\Laplace{\mathop{}\!\mathbin\bigtriangleup}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\Sch}{\mathbf{Sch}}
+\newcommand{\Ring}{\mathbf{Ring}}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Fill in the appropriate information below
+\lhead{SungBin Park, 20150462}  %replace with your name
+\rhead{Intro. to Number Theory \\ 예습 위주 \\ Preparation 6} %replace XYZ with the homework course number, semester (e.g. ``Spring 2019"), and assignment number.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Do not alter this block.
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%Solutions to problems go below.  Please follow the guidelines from https://www.overleaf.com/read/sfbcjxcgsnsk/
+
+
+%Copy the following block of text for each problem in the assignment.
+\section{Prep. 6}
+\begin{problem}{1}
+\end{problem}
+\begin{enumerate}
+    \item [(a)] Let $a,b$ are odd integers between $1$ and $2^{k-2}$ and $a>b$. If we assume $a^2\equiv b^2\mod 2^{k}$, we get $(a-b)(a+b)\equiv 0\mod 2^k$. Since $a,b<2^{k-2}$, $2^{k-1}\nmid (a+b)$. Also if $2^d\mid a+b$ for $d>1$, then $4\nmid a-b$ since $(a+b)-2b \equiv -2\mod 4$. The same applies to $a-b$ case, so $(a-b)(a+b)\not\equiv 0\mod 2^k$, making contradiction. Therefore, $a^2\not\equiv b^2\mod 2^k$.
+    \item[(b)] ($\Rightarrow$) $x^2\equiv a\mod 2^k$ is soluble iff $a\equiv (2n+1)^2\equiv 4n(n+1)+1\mod 2^k$ for some integer $n$. Therefore, if $x^2\equiv a\mod 2^k$ is soluble, then $a\equiv 1\mod 8$.
+    ($\Leftarrow$) From above, we know that the possible $a$ forms a subset in integers of $8n+1$, whose size is $2^{k-3}$. Also, from (a), we know that the possible $a$ set has size not smaller than $2^{k-3}$. Therefore, if a is of the form $8n+1$, then it is soluble.
+\end{enumerate}
+\begin{problem}{2}
+\end{problem}
+Computing $11j\mod p$ for $j$ from $1$ to $15$, $11\rightarrow 11$, $22\rightarrow22$, $33\rightarrow2$, $44\rightarrow13$, $55\rightarrow24$, $66\rightarrow4$, $77\rightarrow15$, $88\rightarrow26$, $99\rightarrow 6$, $110\rightarrow 17$, $121\rightarrow28$, $132\rightarrow8$, $143\rightarrow19$, $154\rightarrow 30$, $165\rightarrow10$. The number of $j$ making the numerically least residue of $11j$ negative is $7$, so
+\begin{equation*}
+    \left(\frac{11}{31}\right)=-1
+\end{equation*}
+\begin{problem}{3}
+By the same procedure in the book, we have $l=([\frac{1}{3}p]-[\frac{1}{6}p])$. For $p>3$, if we represent $p=6n\pm 1$, $l=n$. Therefore, if we let $n=[\frac{p+1}{6}]$, $\left(\frac{3}{p}\right)=(-1)^n$.
+\end{problem}
+\begin{problem}{4}
+\end{problem}
+By the law of quadratic reciprocity,
+\begin{equation*}
+    \left(\frac{5}{p}\right)\left(\frac{p}{5}\right)=(-1)^{p-1}
+\end{equation*}
+For $p=2$, $\left(\frac{5}{2}\right)=1$, so I'll assume $p$ is odd prime, then we get $\left(\frac{5}{p}\right)=\left(\frac{p}{5}\right)$. Also, by Euler's criterion, $\left(\frac{p}{5}\right)\equiv p^2\mod 5$. Therefore, if $p\equiv 3,7\mod 10$, $\left(\frac{5}{p}\right)=-1$ and if $p\equiv 1,9\mod 10$, $\left(\frac{5}{p}\right)=1$.
+\begin{problem}{5}
+By corollary of Gauss' lemma in the book, we get
+\begin{equation*}
+    \left(\frac{2}{p'}\right)=(-1)^{\frac{1}{8}((2p+1)^2-1}=(-1)^{\frac{1}{2}((p(p+1)}=1
+\end{equation*}
+since $p+1\equiv 0\mod 4$. By the Euler's criterion, we also get
+\begin{equation*}
+    \left(\frac{2}{p'}\right)=2^{\frac{1}{2}(p'-1)}=2^p\mod p
+\end{equation*}
+Therefore,
+\begin{equation*}
+    2^p\equiv 1\mod p
+\end{equation*}
+Since $251$ is a prime of form $4n+3$, and $503$ is also a prime, so $503\mid2^{251}-1$ and $2^{251}-1$ is not a Mersenne prime.
+\end{problem}
+\begin{problem}{6}
+\end{problem}
+\begin{enumerate}
+    \item[(a)] Since $\left(\frac{2}{17}\right)=1$, $t^2\equiv 2\mod 17$ is soluble, and there is $(x,y)$ such that $(x/y)=t$ since $\zz/17\zz$ is a field. Therefore, $x^2+15y^2\equiv 0\mod 17$ is soluble.
+    \item[(b)] Since $\left(\frac{6}{17}\right)=-1$, $x^2+11y^2\equiv 0\mod 17$ is not soluble: if it is soluble and a solution is $(x_0,y_0)$, $(x_0/y_0)^2\equiv 6 \mod 17$, which is contradiction.
+\end{enumerate}
+\end{document}
