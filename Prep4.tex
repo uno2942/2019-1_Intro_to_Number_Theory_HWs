@@ -1,0 +1,122 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Do not alter this block of commands.  If you're proficient at LaTeX, you may include additional packages, create macros, etc. immediately below this block of commands, but make sure to NOT alter the header, margin, and comment settings here. 
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts, enumitem, fancyhdr, color, comment, graphicx, environ, kotex, mathrsfs, mathtools, physics, esint, bm}
+\pagestyle{fancy}
+\setlength{\headheight}{65pt}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{sol}
+    {\emph{Solution:}
+    }
+    {
+    \qed
+    }
+\specialcomment{com}{ \color{blue} \textbf{Comment:} }{\color{black}} %for instructor comments while grading
+\NewEnviron{probscore}{\marginpar{ \color{blue} \tiny Problem Score: \BODY \color{black} }}
+
+\DeclareMathOperator{\cc}{\mathbb{C}}
+\DeclareMathOperator{\rr}{\mathbb{R}}
+\DeclareMathOperator{\bA}{\mathbb{A}}
+\DeclareMathOperator{\zz}{\mathbb{Z}}
+\DeclareMathOperator{\fra}{\mathfrak{a}}
+\DeclareMathOperator{\frb}{\mathfrak{b}}
+\DeclareMathOperator{\frm}{\mathfrak{m}}
+\DeclareMathOperator{\frp}{\mathfrak{p}}
+\DeclareMathOperator{\slin}{\mathfrak{sl}}
+\DeclareMathOperator{\Lie}{\mathsf{Lie}}
+\DeclareMathOperator{\Alg}{\mathsf{Alg}}
+\DeclareMathOperator{\Spec}{\mathrm{Spec}}
+\DeclareMathOperator{\End}{\mathrm{End}}
+\DeclareMathOperator{\rad}{\mathrm{rad}}
+\newcommand*\Laplace{\mathop{}\!\mathbin\bigtriangleup}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\Sch}{\mathbf{Sch}}
+\newcommand{\Ring}{\mathbf{Ring}}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Fill in the appropriate information below
+\lhead{SungBin Park, 20150462}  %replace with your name
+\rhead{Intro. to Number Theory \\ 예습 위주 \\ Preparation 4} %replace XYZ with the homework course number, semester (e.g. ``Spring 2019"), and assignment number.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Do not alter this block.
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%Solutions to problems go below.  Please follow the guidelines from https://www.overleaf.com/read/sfbcjxcgsnsk/
+
+
+%Copy the following block of text for each problem in the assignment.
+\section{Quiz 3}
+\begin{problem}{1}
+\end{problem}
+Fix $n$ and assume that there exists primitive roots in $\mod n$ and let the number $a$. Then, for all $1\leq i,j< \phi(n)$, $i\neq j$, $a^i$ is not congruent to $a^j$ in modulo $n$. I'll prove that $a^i$ is a primitive root if and only if $(i, \phi(n))=1$, so the number of primitive roots is $\phi(\phi(n))$
+
+\begin{enumerate}
+    \item[($\Rightarrow$)] Assume $(i,\phi(n))>1$, then $(a^i)^{\frac{\phi(n)}{(i,\phi(n))}}\equiv 1 \mod n$ and it does not satisfies the primitive root condition. Therefore, $a^i$ is not a primitive root.
+    \item[($\Leftarrow$)] Assume $(i, \phi(n))=1$, but $(a^i)^\alpha\equiv (a^i)^\beta \mod n$ for some $1\leq \alpha,\beta< \phi(n)$, $\beta>\alpha$. Then, $a^{i(\beta-\alpha)}\equiv 1 \mod n$ and it means $\phi(n)\mid i(\beta-\alpha)$. Since $(i,\phi(n))=1$, $\phi(n)\mid(\beta-\alpha)$, which is contradiction to $0<\beta-\alpha<\phi(n)$.
+\end{enumerate}
+
+\begin{problem}{2}
+\end{problem}
+By the Fermat's little theorem, $a^{p-1}\equiv 1 \mod p$. Also, if $b^2\equiv 1 \mod p$, $(b-1)(b+1)\equiv 0 \mod p$ and it means $b\equiv 1$ or $-1 \mod p$.(Note that $(\mathbb{Z}/p\mathbb{Z})$ is a field.) Therefore, $a^{\frac{p-1}{2}}\equiv \pm 1 \mod p$.
+
+\begin{problem}{3}
+\end{problem}
+By the tables below, primitive roots for $17$: $3,5,6,7,10,12$ and primitive roots for $25$: $2,3,8,12,13,17,22,23$ since $\phi(25)=20$.
+\begin{table}[h]
+\centering
+\begin{tabular}{llll}
+Num & Order & Num & Order \\
+1   & 1     & 8   & 8     \\
+2   & 8     & 9   & 8     \\
+3   & 16    & 10  & 16    \\
+4   & 4     & 11  & 4     \\
+5   & 16    & 12  & 16    \\
+6   & 16    & 13  & 8     \\
+7   & 16    & 14  & 2    
+\end{tabular}\caption{Order table for $\mod 17$.}
+\end{table}
+\begin{table}[h]
+\centering
+\begin{tabular}{llll}
+Num & Order & Num & Order \\
+1   & 1     & 13  & 20    \\
+2   & 20    & 14  & 10    \\
+3   & 20    & 16  & 5     \\
+4   & 10    & 17  & 20    \\
+6   & 5     & 18  & 4     \\
+7   & 4     & 19  & 10    \\
+8   & 20    & 21  & 10    \\
+9   & 10    & 22  & 20    \\
+11  & 5     & 23  & 20    \\
+12  & 20    & 24  & 2    
+\end{tabular}
+\caption{Order table for $\mod 25$.}
+\end{table}
+
+\newpage
+\begin{problem}{4}
+\end{problem}
+\begin{enumerate}
+    \item[(i)] Since $7$ is prime, it has well-defined indice and has $3$ as a primitive root. As $(5,7-1)=1$, $x^5\equiv 2$, it has unique solution. $3^2\equiv 2 \mod 7$ with $5\textrm{ ind } x\equiv \textrm{ ind } a\equiv 2\mod 6$ gives $\textrm{ ind } x=4$, so $3^4\equiv 4\mod 7$.
+    \item[(ii)] By the same strategy, $(-2)^2\equiv 4 \mod 23$ and $17\textrm{ ind } x\equiv 2\mod 22$ gives a unique solution $x=(-2)^4=16$ since $(17,22)=1$.
+\end{enumerate}
+\end{document}
